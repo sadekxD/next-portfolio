@@ -11,7 +11,8 @@ const Technologies = () => {
 				<LineDivider />
 			</div>
 			<p className="text-lg sm:text-xl md:text-2xl mt-4">
-				I've worked with a range a technologies in the web development world.
+				I{`'`}ve worked with a range a technologies in the web development
+				world.
 				<br />
 				From Back-end To Front-end
 			</p>
