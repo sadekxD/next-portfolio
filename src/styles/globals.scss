@@ -32,6 +32,7 @@
 	height: 100%;
 	z-index: 9999;
 	pointer-events: none;
+	outline: none;
 }
 .drawer > * {
 	transition: transform 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86),
