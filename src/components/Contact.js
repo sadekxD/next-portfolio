@@ -3,10 +3,18 @@ import LineDivider from "./lineDivider";
 
 const Contact = () => {
 	return (
-		<section>
+		<section id="contact">
 			<h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">Contact</h2>
 			<LineDivider />
-			<div className="grid grid-cols-1 md:grid-cols-2 py-32 items-center">
+			<h2 className="mt-8 text-4xl">
+				Hi! let{`'`}s talk about
+				<br />
+				your Project.
+			</h2>
+			<div className="grid grid-cols-1 md:grid-cols-2 py-12 items-center">
+				<div className="hidden md:flex">
+					<Image src={require("../media/mail.svg")} />
+				</div>
 				<div>
 					<form className="md:pr-8" onSubmit={(e) => e.preventDefault()}>
 						<input
@@ -33,14 +41,11 @@ const Contact = () => {
 						/>
 						<button
 							type="submit"
-							className="px-4 py-2 font-semibold text-xl rounded-lg bg-blue-400 text-white float-right"
+							className="px-4 py-2 font-medium text-lg rounded-lg bg-green-400 text-white float-right"
 						>
 							Send Message
 						</button>
 					</form>
-				</div>
-				<div className="hidden md:flex">
-					<Image src={require("../media/mail.svg")} />
 				</div>
 			</div>
 		</section>

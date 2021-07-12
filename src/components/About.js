@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const About = () => {
 	return (
-		<section className="pb-32">
+		<section id="about" className="pb-32">
 			<div>
 				<h1 className="text-3xl sm:text-4xl md:text-5xl font-bold">About</h1>
 				<LineDivider />

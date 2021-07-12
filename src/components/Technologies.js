@@ -3,7 +3,7 @@ import LineDivider from "./lineDivider";
 
 const Technologies = () => {
 	return (
-		<section className="py-20">
+		<section id="technologies" className="py-20">
 			<div>
 				<h1 className="text-3xl sm:text-4xl md:text-5xl font-bold">
 					Technologies
@@ -16,7 +16,7 @@ const Technologies = () => {
 				<br />
 				From Back-end To Front-end
 			</p>
-			<div className="mt-28 grid grid-cols-1 md:grid-cols-2 gap-8">
+			<div className="mt-28 grid grid-cols-1 lg:grid-cols-2 gap-8">
 				<div>
 					<h1 className="text-2xl sm:text-3xl font-bold">Frontend</h1>
 					<LineDivider />

@@ -3,7 +3,7 @@ import LineDivider from "./lineDivider";
 
 const Projects = () => {
 	return (
-		<section className="min-h-screen py-20">
+		<section id="projects" className="min-h-screen py-20">
 			<div>
 				<h1 className="text-3xl sm:text-4xl md:text-5xl font-bold">Projects</h1>
 				<LineDivider />

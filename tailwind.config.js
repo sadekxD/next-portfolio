@@ -7,7 +7,12 @@ module.exports = {
 	],
 	darkMode: false, // or 'media' or 'class'
 	theme: {
-		extend: {},
+		extend: {
+			lineHeight: {
+				72: "72px",
+				42: "42px",
+			},
+		},
 	},
 	variants: {
 		extend: {},
