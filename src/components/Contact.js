@@ -1,12 +1,11 @@
 import Image from "next/image";
-import LineDivider from "./lineDivider";
+import SectionTitle from "./SectionTitle";
 
 const Contact = () => {
 	return (
 		<section id="contact">
-			<h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">Contact</h2>
-			<LineDivider />
-			<h2 className="mt-8 text-4xl">
+			<SectionTitle title="Contact" />
+			<h2 className="mt-8 text-4xl dark:text-white">
 				Hi! let{`'`}s talk about
 				<br />
 				your Project.

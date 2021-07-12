@@ -1,16 +1,12 @@
 import Tech from "./cards/Tech";
+import SectionTitle from "./SectionTitle";
 import LineDivider from "./lineDivider";
 
 const Technologies = () => {
 	return (
 		<section id="technologies" className="py-20">
-			<div>
-				<h1 className="text-3xl sm:text-4xl md:text-5xl font-bold">
-					Technologies
-				</h1>
-				<LineDivider />
-			</div>
-			<p className="text-lg sm:text-xl md:text-2xl mt-4">
+			<SectionTitle title="Technologies" />
+			<p className="text-lg sm:text-xl md:text-2xl mt-4 dark:text-white">
 				I{`'`}ve worked with a range a technologies in the web development
 				world.
 				<br />
