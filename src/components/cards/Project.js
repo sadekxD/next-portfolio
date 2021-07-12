@@ -7,9 +7,9 @@ const Project = () => {
 				<Image src={require("../../media/thumbnail.png")} />
 			</div>
 			<div className="mx-4 md:mx-6">
-				<h1 className="project-title">Mern Memories</h1>
+				<h1 className="project-title dark:text-white">Mern Memories</h1>
 				<hr className="my-2 w-16 h-1 bg-blue-400 mx-auto" />
-				<p className="mt-4 pb-8 mx-auto text-lg sm:text-xl">
+				<p className="mt-4 pb-8 mx-auto text-lg sm:text-xl dark:text-white">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
 					minim veniam, quis nostrud exercitation ullamco laboris nisi ut

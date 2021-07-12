@@ -7,7 +7,7 @@ const Layout = ({ children }) => {
 		<ModeProvider>
 			<div className="layout">
 				<Header />
-				<main>{children}</main>
+				<main className="mt-24">{children}</main>
 				{/* footer */}
 			</div>
 		</ModeProvider>

@@ -14,7 +14,9 @@ const Technologies = () => {
 			</p>
 			<div className="mt-28 grid grid-cols-1 lg:grid-cols-2 gap-8">
 				<div>
-					<h1 className="text-2xl sm:text-3xl font-bold">Frontend</h1>
+					<h1 className="text-2xl sm:text-3xl font-bold dark:text-white">
+						Frontend
+					</h1>
 					<LineDivider />
 					<div className="flex mt-5">
 						<Tech />
@@ -25,7 +27,9 @@ const Technologies = () => {
 					</div>
 				</div>
 				<div>
-					<h1 className="text-2xl sm:text-3xl font-bold">Backend</h1>
+					<h1 className="text-2xl sm:text-3xl font-bold dark:text-white">
+						Backend
+					</h1>
 					<LineDivider />
 					<div className="flex mt-5">
 						<Tech />

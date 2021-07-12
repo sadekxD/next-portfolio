@@ -20,8 +20,10 @@ const About = () => {
 							objectFit="cover"
 						/>
 					</div>
-					<h2 className="mt-4 text-xl sm:text-2xl font-bold">IRFAN SADEK</h2>
-					<hr className="w-28 h-2 bg-gray-900 mt-2" />
+					<h2 className="mt-4 text-xl sm:text-2xl font-bold dark:text-white">
+						IRFAN SADEK
+					</h2>
+					<hr className="w-28 h-2 bg-gray-900 dark:bg-gray-50 mt-2" />
 				</div>
 				<div>
 					<p className="text-lg sm:text-xl md:text-2xl dark:text-white">
