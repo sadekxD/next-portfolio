@@ -10,12 +10,12 @@ const Contact = () => {
 				<br />
 				your Project.
 			</h2>
-			<div className="grid grid-cols-1 md:grid-cols-2 py-12 items-center">
-				<div className="hidden md:flex">
+			<div className="grid grid-cols-1 lg:grid-cols-2 py-12 items-center">
+				<div className="hidden lg:flex">
 					<Image src={require("../media/mail.svg")} />
 				</div>
 				<div>
-					<form className="md:pr-8" onSubmit={(e) => e.preventDefault()}>
+					<form className="lg:pl-8" onSubmit={(e) => e.preventDefault()}>
 						<input
 							type="text"
 							name="username"

@@ -1,9 +1,8 @@
 import Image from "next/image";
-import LineDivider from "./lineDivider";
 
 const Hero = () => {
 	return (
-		<section className="grid grid-cols-1 md:grid-cols-2 py-16 md:py-32">
+		<section className="grid grid-cols-1 lg:grid-cols-2 py-16 lg:py-32">
 			<div>
 				<h1 className="font-bold text-3xl sm:text-4xl md:text-5xl leading-42 md:leading-72 dark:text-white">
 					Welcome to <br />
@@ -21,7 +20,7 @@ const Hero = () => {
 					Read More
 				</button>
 			</div>
-			<div className="mt-8 md:pl-6 md:mt-0">
+			<div className="mt-12 lg:pl-6 lg:mt-0">
 				<Image src={require("../media/website_builder.svg")} />
 			</div>
 		</section>

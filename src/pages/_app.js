@@ -3,7 +3,7 @@ import "tailwindcss/tailwind.css";
 
 function MyApp({ Component, pageProps }) {
 	return (
-		<div className="bg-white dark:bg-gray-800">
+		<div className="">
 			<Component {...pageProps} />
 		</div>
 	);

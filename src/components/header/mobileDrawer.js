@@ -1,9 +1,12 @@
-import Drawer from "../Drawer";
-import { Link } from "react-scroll";
-import { DrawerContext } from "../../contexts/drawer.context";
 import { useCallback, useContext } from "react";
+import { Link } from "react-scroll";
+import Switch from "react-switch";
+import Image from "next/image";
 
-const MobileDrawer = () => {
+import { DrawerContext } from "../../contexts/drawer.context";
+import Drawer from "../Drawer";
+
+const MobileDrawer = ({ toggleMode, darkMode }) => {
 	const { state, dispatch } = useContext(DrawerContext);
 
 	// Toggle Drawer
@@ -49,7 +52,7 @@ const MobileDrawer = () => {
 			open={state.isOpen}
 			toggleHandler={toggleHandler}
 		>
-			<li className="text-center py-3 text-lg list-none">
+			<li className="text-center py-3 list-none">
 				<Link
 					to="projects"
 					spy={true}
@@ -61,7 +64,7 @@ const MobileDrawer = () => {
 					Projects
 				</Link>
 			</li>
-			<li className="text-center py-3 text-lg list-none">
+			<li className="text-center py-3 list-none">
 				<Link
 					to="technologies"
 					spy={true}
@@ -73,7 +76,7 @@ const MobileDrawer = () => {
 					Technologies
 				</Link>
 			</li>
-			<li className="text-center py-3 text-lg list-none">
+			<li className="text-center py-3 list-none">
 				<Link
 					to="about"
 					spy={true}
@@ -85,16 +88,45 @@ const MobileDrawer = () => {
 					About
 				</Link>
 			</li>
-			<Link
-				to="contact"
-				spy={true}
-				smooth={true}
-				offset={-96}
-				duration={500}
-				className="flex items-center justify-center px-4 py-2 rounded-full text-white bg-blue-400 font-medium text-lg cursor-pointer"
-			>
-				Contact me
-			</Link>
+			<li className="text-center py-3 list-none">
+				<Link
+					to="contact"
+					spy={true}
+					smooth={true}
+					offset={-96}
+					duration={500}
+					className="px-4 md:px-6 py-2 cursor-pointer text-lg font-medium"
+				>
+					Contact me
+				</Link>
+			</li>
+			<div className="py-4 px-4 flex-between absolute left-0 right-0 bottom-0 dark:bg-gray-800">
+				<h1 className="text-lg font-medium">Theme</h1>
+				<div className="flex-center">
+					<Switch
+						onChange={toggleMode}
+						onColor="#60A5FA"
+						offColor="#34D399"
+						checked={darkMode}
+					/>
+					<div className="pl-2">
+						{darkMode ? (
+							<Image
+								src={require("../../media/mode/night.svg")}
+								height="36"
+								width="36"
+							/>
+						) : (
+							<Image
+								src={require("../../media/mode/sunny.svg")}
+								height="36"
+								width="36"
+							/>
+						)}
+					</div>
+				</div>
+			</div>
+			{/* <div className="py-2 px-4 flex-between"></div> */}
 		</Drawer>
 	);
 };

@@ -51,12 +51,13 @@
 	position: absolute;
 }
 .drawer-content {
-	background: #fff;
+	@apply bg-white dark:bg-gray-900 dark:text-gray-50;
 	overflow: auto;
 	z-index: 1;
 	position: relative;
 }
 .drawer-handle {
+	@apply bg-white dark:bg-gray-900 dark:text-gray-50;
 	position: absolute;
 	top: 72px;
 	width: 41px;
@@ -73,7 +74,6 @@
 	justify-content: center;
 	-ms-flex-align: center;
 	align-items: center;
-	background: #fff;
 }
 .drawer-handle-icon {
 	width: 14px;

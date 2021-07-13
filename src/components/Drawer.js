@@ -19,7 +19,7 @@ const Drawer = ({
 			<RcDrawer
 				open={open}
 				onClose={toggleHandler}
-				className="drawer"
+				className=""
 				width={320}
 				placement={placement}
 				handler={false}
@@ -33,9 +33,8 @@ const Drawer = ({
 					</div>
 				)}
 				<div className="py-12 px-4">{children}</div>
-				<div className="absolute h-16 w-full left-0 right-0 bottom-0 bg-yellow-500"></div>
 			</RcDrawer>
-			<div onClick={toggleHandler} className="block md:hidden relative">
+			<div onClick={toggleHandler} className="block lg:hidden relative">
 				{drawerHandler}
 			</div>
 		</>

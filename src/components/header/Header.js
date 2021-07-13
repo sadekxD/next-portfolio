@@ -1,13 +1,28 @@
-import { useCallback, useContext, useEffect } from "react";
+import { useCallback, useContext, useEffect, useState } from "react";
 import Image from "next/image";
-import { DrawerProvider } from "../../contexts/drawer.provider";
-import { ModeContext } from "../../contexts/mode.context";
-import MobileDrawer from "./mobileDrawer";
 import { Link } from "react-scroll";
 import Switch from "react-switch";
 
+// Context
+import { DrawerProvider } from "../../contexts/drawer.provider";
+import { ModeContext } from "../../contexts/mode.context";
+import MobileDrawer from "./mobileDrawer";
+
 const Header = () => {
 	const { state, dispatch } = useContext(ModeContext);
+	const [scrollActice, setScrollActive] = useState(false);
+
+	useEffect(() => {
+		const handleScroll = () => {
+			if (window.scrollY > 96) {
+				setScrollActive(true);
+			} else {
+				setScrollActive(false);
+			}
+		};
+
+		window.addEventListener("scroll", handleScroll);
+	}, []);
 
 	useEffect(() => {
 		if (state.darkMode) {
@@ -36,9 +51,15 @@ const Header = () => {
 		dispatch({ type: "TOGGLE" });
 	}, [dispatch]);
 
+	console.log(scrollActice);
+
 	return (
 		<DrawerProvider>
-			<nav className="fixed top-0 right-0 left-0 bg-white dark:bg-gray-800 z-50">
+			<nav
+				className={`fixed top-0 right-0 left-0 bg-white z-50 shadow-sm ${
+					scrollActice ? "dark:bg-gray-800 dark:shadow-lg" : "dark:bg-gray-900"
+				}`}
+			>
 				<div className="layout h-24 flex-between">
 					<div className="flex-center dark:text-gray-50">
 						<svg
@@ -99,7 +120,7 @@ const Header = () => {
 							Contact
 						</Link>
 					</div>
-					<div className="flex-center">
+					<div className="hidden lg:flex items-center justify-center">
 						<Switch
 							onChange={toggleMode}
 							onColor="#60A5FA"
@@ -122,7 +143,7 @@ const Header = () => {
 							)}
 						</div>
 					</div>
-					<MobileDrawer />
+					<MobileDrawer toggleMode={toggleMode} darkMode={state.darkMode} />
 				</div>
 			</nav>
 		</DrawerProvider>

@@ -1,17 +1,60 @@
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import {
+	moveRightAnim1,
+	moveRightAnim2,
+	moveRightAnim3,
+	easing,
+} from "../animations/aboutAnim";
 import SectionTitle from "./SectionTitle";
 
 const About = () => {
+	const [ref, inView] = useInView({
+		triggerOnce: true,
+	});
+	const controls = useAnimation();
+
+	useEffect(() => {
+		if (inView) {
+			controls.start("animate");
+		} else {
+			controls.start("initial");
+		}
+	}, [controls, inView]);
+
 	return (
-		<section id="about" className="pb-32">
+		<section id="about" className="pb-32" ref={ref}>
 			<SectionTitle title="About" />
-			<div className="mt-28 grid grid-cols-1 md:grid-cols-2 gap-8">
+			<motion.div
+				variants={{
+					animate: {
+						transition: {
+							delayChildren: 0.5,
+							staggerChildren: 0.5,
+							easing,
+						},
+					},
+				}}
+				initial="initial"
+				animate={controls}
+				className="mt-28 grid grid-cols-1 md:grid-cols-2 gap-8"
+			>
 				<div className="flex flex-col justify-center items-center md:pr-6 md:border-r-4 border-blue-400">
-					<div className="relative h-48 w-48">
-						<motion.div className="absolute top-0 right-0 left-0 bottom-0 transform -translate-x-5 -translate-y-5 rounded-md bg-blue-200"></motion.div>
-						<motion.div className="absolute top-0 right-0 left-0 bottom-0 transform -translate-x-3 -translate-y-3 rounded-md bg-blue-300"></motion.div>
-						<motion.div className="absolute top-0 right-0 left-0 bottom-0 transform -translate-x-1 -translate-y-1 rounded-md bg-blue-400"></motion.div>
+					<motion.div whileTap={{ scale: 0.9 }} className="relative h-48 w-48">
+						<motion.div
+							variants={moveRightAnim1}
+							className="absolute top-0 right-0 left-0 bottom-0 rounded-md bg-blue-200"
+						></motion.div>
+						<motion.div
+							variants={moveRightAnim2}
+							className="absolute top-0 right-0 left-0 bottom-0 rounded-md bg-blue-300"
+						></motion.div>
+						<motion.div
+							variants={moveRightAnim3}
+							className="absolute top-0 right-0 left-0 bottom-0 rounded-md bg-blue-400"
+						></motion.div>
 						<Image
 							className="rounded-md"
 							alt="Mountains"
@@ -19,7 +62,7 @@ const About = () => {
 							layout="fill"
 							objectFit="cover"
 						/>
-					</div>
+					</motion.div>
 					<h2 className="mt-4 text-xl sm:text-2xl font-bold dark:text-white">
 						IRFAN SADEK
 					</h2>
@@ -49,7 +92,7 @@ const About = () => {
 						Resume
 					</button>
 				</div>
-			</div>
+			</motion.div>
 		</section>
 	);
 };
