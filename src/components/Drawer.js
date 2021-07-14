@@ -19,7 +19,7 @@ const Drawer = ({
 			<RcDrawer
 				open={open}
 				onClose={toggleHandler}
-				className=""
+				className="font-nuni"
 				width={320}
 				placement={placement}
 				handler={false}

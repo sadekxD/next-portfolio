@@ -56,8 +56,10 @@ const Header = () => {
 	return (
 		<DrawerProvider>
 			<nav
-				className={`fixed top-0 right-0 left-0 bg-white z-50 shadow-sm ${
-					scrollActice ? "dark:bg-gray-800 dark:shadow-lg" : "dark:bg-gray-900"
+				className={`fixed top-0 right-0 left-0 z-50 font-nuni ${
+					scrollActice
+						? "bg-white bg-opacity-100 shadow-sm dark:shadow-lg dark:bg-gray-800 "
+						: "dark:bg-gray-900 dark:bg-opacity-0 bg-opacity-0"
 				}`}
 			>
 				<div className="layout h-24 flex-between">

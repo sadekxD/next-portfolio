@@ -1,3 +1,8 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+
+const fontFamily = defaultTheme.fontFamily;
+fontFamily["nuni"] = ["Nunito", "sans-serif"];
+
 module.exports = {
 	purge: [
 		"./src/pages/**/*.{js,ts,jsx,tsx}",
@@ -20,7 +25,11 @@ module.exports = {
 			zIndex: {
 				"-1": "-1",
 			},
+			fontFamily: {
+				lato: ["Lato", "sans-serif"],
+			},
 		},
+		fontFamily: fontFamily,
 	},
 	variants: {
 		extend: {},

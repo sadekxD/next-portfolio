@@ -25,14 +25,14 @@ const About = () => {
 	}, [controls, inView]);
 
 	return (
-		<section id="about" className="pb-32" ref={ref}>
+		<section id="about" className="pb-32 font-nuni" ref={ref}>
 			<SectionTitle title="About" />
 			<motion.div
 				variants={{
 					animate: {
 						transition: {
-							delayChildren: 0.5,
-							staggerChildren: 0.5,
+							delayChildren: 0.2,
+							staggerChildren: 0.01,
 							easing,
 						},
 					},
@@ -63,13 +63,13 @@ const About = () => {
 							objectFit="cover"
 						/>
 					</motion.div>
-					<h2 className="mt-4 text-xl sm:text-2xl font-bold dark:text-white">
+					<h2 className="mt-4 text-xl sm:text-2xl font-bold dark:text-white font-sans">
 						IRFAN SADEK
 					</h2>
 					<hr className="w-28 h-2 bg-gray-900 dark:bg-gray-50 mt-2" />
 				</div>
 				<div>
-					<p className="text-lg sm:text-xl md:text-2xl dark:text-white">
+					<p className="text-lg sm:text-xl md:text-2xl dark:text-gray-400">
 						The purpose of JavaScript Mastery is to help aspiring and
 						established developers to take their development skills to the next
 						level and build awesome apps.

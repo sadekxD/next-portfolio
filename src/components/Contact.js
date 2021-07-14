@@ -3,7 +3,7 @@ import SectionTitle from "./SectionTitle";
 
 const Contact = () => {
 	return (
-		<section id="contact">
+		<section id="contact" className="font-nuni">
 			<SectionTitle title="Contact" />
 			<h2 className="mt-8 text-4xl dark:text-white">
 				Hi! let{`'`}s talk about
@@ -21,14 +21,14 @@ const Contact = () => {
 							name="username"
 							id="username"
 							placeholder="Your Name"
-							className="mt-0 bg-transparent dark:text-white block w-full px-0.5 border-0 border-b-2 border-gray-400 focus:ring-0 focus:border-black dark:focus:border-gray-100 mb-12 font-normal text-lg"
+							className="mt-0 bg-transparent dark:text-white block w-full px-2 border-0 border-b-2 border-gray-400 focus:ring-0 focus:border-black dark:focus:border-gray-100 mb-12 font-normal text-lg"
 						/>
 						<input
 							type="email"
 							name="email"
 							id="email"
 							placeholder="Your Email"
-							className="mt-0 bg-transparent dark:text-white block w-full px-0.5 border-0 border-b-2 border-gray-400 focus:ring-0 focus:border-black dark:focus:border-gray-100 mb-12 font-normal text-lg"
+							className="mt-0 bg-transparent dark:text-white block w-full px-2 border-0 border-b-2 border-gray-400 focus:ring-0 focus:border-black dark:focus:border-gray-100 mb-12 font-normal text-lg"
 						/>
 						<textarea
 							rows="5"
@@ -36,7 +36,7 @@ const Contact = () => {
 							name="message"
 							id="message"
 							placeholder="Your Message"
-							className="mt-0 bg-transparent dark:text-white block w-full px-0.5 border-0 border-b-2 border-gray-400 focus:ring-0 focus:border-black dark:focus:border-gray-100 mb-12 font-normal text-lg"
+							className="mt-0 bg-transparent dark:text-white block w-full px-2 border-0 border-b-2 border-gray-400 focus:ring-0 focus:border-black dark:focus:border-gray-100 mb-12 font-normal text-lg"
 						/>
 						<button
 							type="submit"

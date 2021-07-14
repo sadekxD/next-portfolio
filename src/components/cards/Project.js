@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { AiOutlineGithub, AiOutlineEye } from "react-icons/ai";
 
 const Project = () => {
 	return (
@@ -12,19 +13,23 @@ const Project = () => {
 				<Image src={require("../../media/thumbnail.png")} />
 			</div>
 			<div className="mx-4 md:mx-6 pb-4">
-				<h1 className="project-title dark:text-white">Mern Memories</h1>
+				<h1 className="project-title dark:text-white font-nuni">
+					Mern Memories
+				</h1>
 				<div className="my-2 w-16 h-1 bg-blue-400 mx-auto" />
-				<p className="mt-4 pb-8 mx-auto text-lg dark:text-white">
+				<p className="mt-4 pb-8 mx-auto text-lg dark:text-white font-lato">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
 					minim veniam, quis nostrud exercitation ullamco laboris nisi ut
 					aliquip ex ea commodo consequat.
 				</p>
 				<div className="mt-4 flex justify-end">
-					<button className="px-4 py-2 text-base rounded-lg dark:text-white mr-2 bg-green-400">
+					<button className="px-4 py-2 text-base rounded-lg dark:text-white mr-2 bg-green-400 hover:bg-green-500 flex items-center">
+						<AiOutlineGithub className="mr-2 h-6 w-6" />
 						Code
 					</button>
-					<button className="px-4 py-2 text-base rounded-lg dark:text-white bg-gray-400">
+					<button className="px-4 py-2 text-base rounded-lg dark:text-white bg-gray-400 hover:bg-blue-500 flex items-center">
+						<AiOutlineEye className="mr-2 h-6 w-6" />
 						Visit
 					</button>
 				</div>

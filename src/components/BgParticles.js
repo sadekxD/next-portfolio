@@ -1,6 +1,9 @@
+import { useContext } from "react";
 import Particles from "react-particles-js";
+import { ModeContext } from "../contexts/mode.context";
 
 const BgParticles = () => {
+	const { state } = useContext(ModeContext);
 	return (
 		<Particles
 			className="fixed top-0 right-0 left-0 bottom-0 bg-white dark:bg-gray-900 -z-1"
@@ -28,6 +31,9 @@ const BgParticles = () => {
 						speed: 1,
 						direction: "top",
 						out_mode: "out",
+					},
+					color: {
+						value: state.darkMode ? "#FCD34D" : "#4F46E5",
 					},
 				},
 				interactivity: {
