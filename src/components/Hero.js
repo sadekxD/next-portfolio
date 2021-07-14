@@ -8,7 +8,7 @@ const Hero = () => {
 				<h1 className="font-bold font-nuni text-3xl sm:text-4xl md:text-5xl leading-42 md:leading-72 dark:text-white">
 					Welcome to <br />
 					My Personal{" "}
-					<span className="text-transparent font-extrabold bg-clip-text bg-gradient-to-r from-blue-400 to-yellow-500 uppercase">
+					<span className="text-transparent font-extrabold bg-clip-text bg-gradient-to-r from-blue-400 dark:from-yellow-400 to-yellow-500 dark:to-blue-400 uppercase">
 						Portfolio
 					</span>
 				</h1>

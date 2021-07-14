@@ -1,6 +1,7 @@
 import Header from "../components/header/Header";
 import { ModeProvider } from "../contexts/mode.provider";
 import BgParticles from "../components/BgParticles";
+import Footer from "../components/Footer";
 
 const Layout = ({ children }) => {
 	return (
@@ -9,7 +10,7 @@ const Layout = ({ children }) => {
 				<BgParticles />
 				<Header />
 				<main className="mt-24 z-10">{children}</main>
-				{/* footer */}
+				<Footer />
 			</div>
 		</ModeProvider>
 	);

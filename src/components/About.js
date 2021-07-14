@@ -70,9 +70,10 @@ const About = () => {
 				</div>
 				<div>
 					<p className="text-lg sm:text-xl md:text-2xl dark:text-gray-400">
-						The purpose of JavaScript Mastery is to help aspiring and
-						established developers to take their development skills to the next
-						level and build awesome apps.
+						Hi, I am Irfan Sadek. I am a self taught full stack web developer
+						with 2 years of experience. I am working as a programming instructor
+						in Technotra Limited and have worked on 50 + freelance projects over
+						the years.
 					</p>
 					<button className="mt-8 px-4 py-2 border dark:border-opacity-0 text-xl sm:text-xl float-right md:float-left rounded-md flex-center dark:bg-blue-400 dark:text-white">
 						<svg
